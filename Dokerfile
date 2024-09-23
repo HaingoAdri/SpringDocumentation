@@ -1,14 +1,17 @@
-# Utiliser l'image OpenJDK pour Java 22
-FROM openjdk:22-slim
+#
+# Build du projet (Multi-Stage)
+# --------------------------------
+#
+# Utiliser une image de Maven pour construire le projet avec Java
+# Ce sous-environnement s'appelle "build"
+FROM maven:3.9.6-eclipse-temurin-22 AS build
+COPY . .
+RUN mvn clean package
 
-# Définir un argument pour le fichier JAR à copier
-ARG JAR_FILE=target/*.jar
-
-# Copier le fichier JAR de l'application dans l'image Docker
-COPY ${JAR_FILE} app.jar
-
-# Exposer le port 8080 pour l'accès à l'application
-EXPOSE 8080
-
-# Définir le point d'entrée pour exécuter l'application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Utiliser une image OpenJDK
+# Exposer le port que notre composant va utiliser pour écouter les requêtes
+# Copier le JAR généré depuis "build" et le renommer
+FROM openjdk:22-jdk
+EXPOSE 8761
+COPY --from=build /app/target/mon-application-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
