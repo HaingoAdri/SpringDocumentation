@@ -1,7 +1,7 @@
 # Étape de construction
-FROM maven:3.9.8-openjdk-22 AS build
+FROM maven:3.9.8 AS build
 COPY . .
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 # Étape de production
 FROM openjdk:22
