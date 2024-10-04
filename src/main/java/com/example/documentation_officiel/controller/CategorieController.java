@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.documentation_officiel.model.Categorie;
-import com.example.documentation_officiel.model.Information;
 import com.example.documentation_officiel.repository.CategorieRepository;
 
 @RestController
@@ -31,7 +30,7 @@ public class CategorieController {
     @PostMapping("/save_categorie")
     public ResponseEntity<Categorie> save_categorie(@RequestBody Categorie cate){
         Categorie categorie = categorieRepository.save(cate);
-        return ResponseEntity.ok(cate);
+        return ResponseEntity.ok(categorie);
     }
 
     @GetMapping("/allCategorie")
