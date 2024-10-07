@@ -1,21 +1,12 @@
-# Utiliser une image de base avec Maven et Java 22
-FROM maven:3.9.8-eclipse-temurin-17
-
-# Définir le répertoire de travail dans le conteneur
-WORKDIR /app
-
-# Copier le fichier POM et les sources
+## Production DokerFile
+FROM maven:3.9.8-openjdk-17 AS build
+WORKDIR /home/app
 COPY pom.xml .
 COPY src ./src
+RUN mvn clean install -Dmaven.test.skip=true
 
-# Télécharger les dépendances Maven
-RUN mvn dependency:go-offline
-
-# Compiler l'application
-RUN mvn clean install
-
-# Exposer le port 8080
+FROM openjdk:17
+WORKDIR /app
+COPY --from=build /home/app/target/documentation_officiel-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
 EXPOSE 8080
-
-# Commande pour exécuter l'application
-CMD ["mvn", "spring-boot:run"]
