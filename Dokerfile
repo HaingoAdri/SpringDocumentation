@@ -1,5 +1,5 @@
 # Utiliser une image de base avec Maven et Java 22
-FROM maven:3.9.8-eclipse-temurin-22
+FROM maven:3.9.8-eclipse-temurin-21
 
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /app
