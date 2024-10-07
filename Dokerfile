@@ -1,14 +1,21 @@
-# Utiliser l'image de base OpenJDK 22
-FROM openjdk:22-jdk-slim
+# Utiliser une image de base avec Maven et Java 22
+FROM maven:3.9.8-eclipse-temurin-22
 
-# Définir le répertoire de travail
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier le fichier JAR dans le conteneur
-COPY target/*.jar app.jar
+# Copier le fichier POM et les sources
+COPY pom.xml .
+COPY src ./src
 
-# Exposer le port que l'application utilise
+# Télécharger les dépendances Maven
+RUN mvn dependency:go-offline
+
+# Compiler l'application
+RUN mvn clean install
+
+# Exposer le port 8080
 EXPOSE 8080
 
 # Commande pour exécuter l'application
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+CMD ["mvn", "spring-boot:run"]
