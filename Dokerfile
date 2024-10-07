@@ -1,12 +1,25 @@
-## Production DokerFile
-FROM maven:3.9.8-openjdk-17 AS build
+## Étape de build
+FROM maven:3.9.8-eclipse-temurin-22 AS build
+
 WORKDIR /home/app
+
+# Copier les fichiers de configuration Maven
 COPY pom.xml .
 COPY src ./src
+
+# Télécharger les dépendances et construire l'application
 RUN mvn clean install -Dmaven.test.skip=true
 
-FROM openjdk:17
+## Étape de runtime
+FROM eclipse-temurin:22-jdk
+
 WORKDIR /app
+
+# Copier le jar construit depuis l'étape de build
 COPY --from=build /home/app/target/documentation_officiel-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Exposer le port utilisé par l'application
 EXPOSE 8080
+
+# Définir le point d'entrée pour exécuter l'application
+ENTRYPOINT ["java", "-jar", "app.jar"]
