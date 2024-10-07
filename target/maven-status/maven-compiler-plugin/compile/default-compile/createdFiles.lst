@@ -21,7 +21,6 @@ com/example/documentation_officiel/model/Categorie.class
 com/example/documentation_officiel/controller/InformationController.class
 com/example/documentation_officiel/controller/BodysController.class
 com/example/documentation_officiel/repository/CategorieRepository.class
-com/example/documentation_officiel/controller/Error_CodesRepository.class
 com/example/documentation_officiel/model/Sous_categorie.class
 com/example/documentation_officiel/model/Configuration.class
 com/example/documentation_officiel/model/Footer.class

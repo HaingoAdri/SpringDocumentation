@@ -25,7 +25,7 @@ public class Bodys {
     private String details;
 
     @Column(name="sous_categorie")
-    private int sous_categorie;
+    private int sousCategorie;
 
     public Long getId() {
         return id;
@@ -60,11 +60,11 @@ public class Bodys {
     }
 
     public int getSous_categorie() {
-        return sous_categorie;
+        return sousCategorie;
     }
 
     public void setSous_categorie(int sous_categorie) {
-        this.sous_categorie = sous_categorie;
+        this.sousCategorie = sous_categorie;
     }
 
     

@@ -1,6 +1,5 @@
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/Sous_categorieRepository.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Header.java
-/Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/controller/Error_CodesRepository.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/controller/HeaderController.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/InformationRepository.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/CategorieRepository.java
@@ -9,6 +8,7 @@
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/controller/UtilisateurController.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/controller/CategorieController.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Error_Codes.java
+/Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/controller/Error_CodesController.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Information.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Categorie.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/ConfigurationRepository.java

@@ -31,7 +31,7 @@ public class Sous_categorieController {
     @PostMapping("/save_Sous_categorie")
     public ResponseEntity<Sous_categorie> save_Sous_categorie(@RequestBody Sous_categorie cate){
         Sous_categorie categorie = sous_categorieRepository.save(cate);
-        return ResponseEntity.ok(cate);
+        return ResponseEntity.ok(categorie);
     }
 
     @GetMapping("/allSous_categorie")
