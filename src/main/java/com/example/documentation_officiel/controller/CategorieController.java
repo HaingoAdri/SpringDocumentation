@@ -20,7 +20,7 @@ import com.example.documentation_officiel.repository.CategorieRepository;
 
 @RestController
 @RequestMapping("/api/endpoints")
-@CrossOrigin(origins = "http://localhost:8085", allowCredentials = "true")
+@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
 public class CategorieController {
     
     @Autowired
