@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/api/configuration")
 @CrossOrigin(origins = {
     "https://mobilosoft-back-end-production.up.railway.app",
-    "http://localhost:3000/"
+    "http://localhost:3000"
 }, allowCredentials = "true")
 public class ConfigurationController {
 
