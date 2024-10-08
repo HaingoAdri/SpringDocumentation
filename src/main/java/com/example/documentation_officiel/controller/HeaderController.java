@@ -19,7 +19,7 @@ import com.example.documentation_officiel.repository.HeaderRepository;
 
 @RestController
 @RequestMapping("/api/header")
-
+@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
 public class HeaderController {
     
     @Autowired

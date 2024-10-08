@@ -20,6 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/body")
+@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
 public class BodysController {
 
     @Autowired
