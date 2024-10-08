@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/api/body")
 @CrossOrigin(origins = {
     "https://dulcet-biscuit-be2122.netlify.app/",
-    "http://localhost:3000"
+    "https://frolicking-lamington-39fdc3.netlify.app/"
 }, allowCredentials = "true")
 public class BodysController {
 
