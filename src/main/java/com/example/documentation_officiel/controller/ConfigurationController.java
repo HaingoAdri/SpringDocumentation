@@ -24,7 +24,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/configuration")
-@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
+@CrossOrigin(origins = {
+    "https://mobilosoft-back-end-production.up.railway.app",
+    "http://localhost:8080/"
+}, allowCredentials = "true")
+
 public class ConfigurationController {
 
     @Autowired
