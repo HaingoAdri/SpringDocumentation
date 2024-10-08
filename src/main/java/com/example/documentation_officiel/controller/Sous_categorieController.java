@@ -22,7 +22,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/sous_categorie")
-@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
+@CrossOrigin(origins = {
+    "https://6704e87de334cf00cd293879--dulcet-biscuit-be2122.netlify.app/",
+    "http://localhost:3000"
+}, allowCredentials = "true")
 public class Sous_categorieController {
     
     @Autowired
@@ -42,6 +45,11 @@ public class Sous_categorieController {
     @GetMapping("/allSous_categorie_view")
     public List<Object[]> getAllSous_categorie_view() {
         return sous_categorieRepository.getAllFromView();
+    }
+
+    @GetMapping("/categorie/{categorie}")
+    public List<Sous_categorie> getSousCategoriesByCategorie(@PathVariable int categorie) {
+        return sous_categorieRepository.findByCategorie(categorie);
     }
 
     @GetMapping("/search")

@@ -12,4 +12,6 @@ import com.example.documentation_officiel.model.Sous_categorie;
 public interface Sous_categorieRepository extends JpaRepository<Sous_categorie, Long>{
     @Query(value = "SELECT * FROM view_sous_categorie order by id", nativeQuery = true)
     List<Object[]> getAllFromView();
+
+    List<Sous_categorie> findByCategorie(int categorie);
 }

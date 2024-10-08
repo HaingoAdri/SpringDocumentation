@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @RequestMapping("/api/configuration")
 @CrossOrigin(origins = {
-    "https://mobilosoft-back-end-production.up.railway.app",
+    "https://6704e87de334cf00cd293879--dulcet-biscuit-be2122.netlify.app/",
     "http://localhost:3000"
 }, allowCredentials = "true")
 public class ConfigurationController {
