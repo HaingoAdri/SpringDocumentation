@@ -19,6 +19,7 @@
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Sous_categorie.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/BodysRepository.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/Error_CodesRepository.java
+/Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/config/WebConfig.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Configuration.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/repository/HeaderRepository.java
 /Users/eva_smartelia/Documents/SpringDocumentation/src/main/java/com/example/documentation_officiel/model/Utilisateur.java

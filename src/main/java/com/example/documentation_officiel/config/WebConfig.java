@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://mobilosoft-back-end-production.up.railway.app","http://localhost:8080") // Ajouter ici toutes les origines autorisées
+                .allowedOrigins("https://mobilosoft-back-end-production.up.railway.app","http://localhost:3000")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowCredentials(true);
     }

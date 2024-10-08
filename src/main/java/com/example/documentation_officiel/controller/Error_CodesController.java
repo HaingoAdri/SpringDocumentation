@@ -18,7 +18,7 @@ import com.example.documentation_officiel.repository.Error_CodesRepository;
 
 @RestController
 @RequestMapping("/api/codes")
-@CrossOrigin(origins = "https://dulcet-biscuit-be2122.netlify.app/", allowCredentials = "true")
+
 public class Error_CodesController {
     @Autowired
     private Error_CodesRepository errorCodesRepository;
